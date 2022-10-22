@@ -1,0 +1,26 @@
+---
+- name: "Disabling IPV6 on the server"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/network/ipv6-disable.yml"
+
+- name: "Setting up Brazilian timezone"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/timezone.yml"
+
+- name: "Setting up Brazilian NTP Servers"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ntp-servers.yml"
+
+- name: "Ensure the VM trusts the HomeLab's CA Certificate."
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
+  vars:
+    ssl_certificate_path: "/opt/certificates/certificate.authority/certificate.authority.crt"
+
+- name: "Installing required packages"
+  ansible.builtin.import_tasks: "installing-packages.yml"
+
+- name: "Removing unnecessary packages"
+  ansible.builtin.import_tasks: "removing-packages.yml"
+
+- name: "Recreating the machine-id file so the new VM can get a new IP"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/machine-id.yml"
+
+- name: "Removing unnecessary files, folders and configuration"
+  ansible.builtin.import_tasks: "clean-up.yml"

@@ -1,0 +1,6 @@
+---
+- name: "Setting some extra configurations directly on the Proxmox node"
+  hosts: "{{ node }}"
+
+  roles:
+    - "kvm_node"
