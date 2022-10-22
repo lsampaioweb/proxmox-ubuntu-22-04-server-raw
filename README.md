@@ -48,10 +48,10 @@ Run these commands on the computer that is running Packer:
 05 - Run Packer to create the template.
   cd packer
   packer init config.pkr.hcl
+  
   packer build -only="credencials.file.password" .
   packer build -only="machine.proxmox-iso.template" .
   packer build -only="kvm-node.null.extra-config" .
-
   or 
   ./pipeline.sh
 ```
