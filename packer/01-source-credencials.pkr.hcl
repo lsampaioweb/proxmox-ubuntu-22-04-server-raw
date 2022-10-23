@@ -13,13 +13,13 @@ build {
   provisioner "shell-local" {
     inline = [
       # Generate a random password and save it in the secret manager.
-      "echo -n $(cat ${local.path_random_password}) | secret-tool store --label='${local.project_full_name}' password '${local.project_full_name}'",
+      "echo -n $(cat ${local.path_random_password}) | secret-tool store --label='${var.vm_name}' password '${var.vm_name}'",
 
       # Get the password and create a file with its encrypted value.
-      "mkpasswd --method=SHA-512 --rounds=4096 $(secret-tool lookup password ${local.project_full_name}) > ${local.path_encrypted_password}",
+      "mkpasswd --method=SHA-512 --rounds=4096 $(secret-tool lookup password ${var.vm_name}) > ${local.path_encrypted_password}",
 
       # Replace the content of the {hostname} placeholder with the name of this project.
-      "sed -e \"s|{hostname}|${local.project_full_name}|g\" ${local.path_safe_user_data} > ${local.path_encrypted_user_data}",
+      "sed -e \"s|{hostname}|${var.vm_name}|g\" ${local.path_safe_user_data} > ${local.path_encrypted_user_data}",
 
       # Replace the content of the {username} placeholder with the packer user name.
       "sed -i \"s|{username}|${var.ssh_username}|g\" ${local.path_encrypted_user_data}",

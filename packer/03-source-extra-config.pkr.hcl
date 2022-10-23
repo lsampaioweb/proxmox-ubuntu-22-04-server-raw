@@ -6,10 +6,10 @@ build {
   name = "kvm-node"
 
   sources = ["source.null.extra-config"]
-  
+
   provisioner "ansible" {
     playbook_file = "${local.path_ansible_scripts}/kvm_node.yml"
-    
+
     inventory_file = "${local.path_ansible_scripts}/hosts"
 
     extra_arguments = [

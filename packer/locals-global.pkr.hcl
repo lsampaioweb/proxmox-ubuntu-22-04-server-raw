@@ -1,6 +1,4 @@
 locals {
-  project_full_name = "${var.vm_name}-${var.vm_id}"
-
   iso_file = replace("${var.iso_full_file_path}", "{iso_file}", "${var.iso_file}")
 
   path_user_data           = "autoinstall"
