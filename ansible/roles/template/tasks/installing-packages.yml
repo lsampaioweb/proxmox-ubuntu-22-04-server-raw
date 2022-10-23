@@ -10,15 +10,8 @@
     packages:
       - {name: "sudo"} # To enable elevated command.
       - {name: "openssh-server"} # To enable SSH.
+      - {name: "sshpass"}
       - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
-      - {name: "ethtool"} # To enable Wake-on-Lan.
-      - {name: "traceroute"} # It helps debug network problems.
-      - {name: "whois"} # To enable mkpasswd command.
       - {name: "python3-pip"}
       - {name: "python-is-python3"}
       - {name: "pip"}
-      - {name: "sshpass"}
-      - {name: "libsecret-tools"}
-      - {name: "net-tools"}
-      - {name: "curl"}
-      - {name: "tree"}
