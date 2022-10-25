@@ -1,5 +1,5 @@
-# packer-proxmox-ubuntu-22-04-server-raw
-Packer project to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
+# proxmox-ubuntu-22-04-server-raw
+Project to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
 
 Run these commands on the Proxmox node (just once and on any node):
 ```bash
