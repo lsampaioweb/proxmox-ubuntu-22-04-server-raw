@@ -10,8 +10,6 @@
 
 - name: "Ensure the VM trusts the HomeLab's CA Certificate."
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
-  vars:
-    ssl_certificate_path: "/opt/certificates/certificate.authority/certificate.authority.crt"
 
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
