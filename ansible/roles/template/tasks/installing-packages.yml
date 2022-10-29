@@ -16,3 +16,4 @@
       - {name: "python-is-python3"}
       - {name: "pip"} # A tool for installing and managing Python packages.
       - {name: "libsecret-tools"} # Store and retrieve passwords.
+      - {name: "uuid"} # Universally Unique Identifier Command-Line Tool.
