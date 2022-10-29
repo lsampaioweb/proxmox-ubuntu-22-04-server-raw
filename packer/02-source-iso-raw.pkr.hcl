@@ -18,10 +18,6 @@ source "proxmox-iso" "template" {
   # OS
   iso_file = local.iso_file
   os       = var.os
-  vga {
-    type   = var.vga.type
-    memory = var.vga.memory
-  }
 
   # System
   qemu_agent      = var.qemu_agent
