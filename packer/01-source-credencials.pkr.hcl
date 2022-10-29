@@ -1,8 +1,8 @@
 source "file" "password" {
   # Create a unique and big string and save it to the file. 
   # e.g: 20b33efa-9302-4b1a-8a38-403d57c8291a
-  content = "${uuidv4()}"
-  target  = "${local.path_random_password}"
+  content = uuidv4()
+  target  = local.path_random_password
 }
 
 build {
