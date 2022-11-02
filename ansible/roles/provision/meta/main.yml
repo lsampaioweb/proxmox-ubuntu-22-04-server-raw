@@ -13,3 +13,6 @@ galaxy_info:
     - proxmox
     - ubuntu
     - terraform
+
+dependencies:
+  - role: common
