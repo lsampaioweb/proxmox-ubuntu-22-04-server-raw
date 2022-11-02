@@ -2,11 +2,11 @@
 Project with Packer, Terraform and Ansible scripts to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
 
 # Scripts:
-[Packer](packer/README.md "Packer")
+[Packer](packer/ "Packer")
 
-[Terraform](terraform/README.md "Terraform")
+[Terraform](terraform/ "Terraform")
 
-[Ansible](ansible/README.md "Ansible")
+[Ansible](ansible/ "Ansible")
 
 # Links:
 
