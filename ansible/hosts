@@ -2,7 +2,7 @@
 localhost ansible_connection=local
 
 [target]
-ansible_host=<ip>
+template ansible_host=<ip>
 
 [target:vars]
 ansible_user=usr_ansible
