@@ -7,9 +7,9 @@ Run these commands on the computer that is running Packer:
   cd packer
   
   packer init config.pkr.hcl
-  packer build -only="credencials.file.password" -var-file=project.pkrvars.hcl iso/.
-  packer build -only="template.proxmox-iso.ubuntu" -var-file=project.pkrvars.hcl iso/.
-  packer build -only="kvm-node.null.extra-config" -var-file=project.pkrvars.hcl iso/.
+  packer build -only="credencials.file.password" -var-file=project.pkrvars.hcl iso/. 
+  packer build -only="template.proxmox-iso.ubuntu" -var-file=project.pkrvars.hcl iso/. 
+  packer build -only="kvm-node.null.extra-config" -var-file=project.pkrvars.hcl iso/. 
   or 
   ./pipeline.sh
 ```
