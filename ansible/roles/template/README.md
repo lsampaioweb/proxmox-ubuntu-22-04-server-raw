@@ -8,19 +8,22 @@ Run the command in the terminal:
 # Tasks:
 
 ## 1. Disable IPV6.
-  1. Set GRUB_CMDLINE_LINUX="ipv6.disable=1".
 
 ## 2. Setup Brazilian timezone.
-  1. Set the timezone to America/Maceio.
 
 ## 3. Setup Brazilian NTP Servers.
-  1. 0.br.pool.ntp.org.
-  2. 1.br.pool.ntp.org.
+
+## 4. Install the Homelab's CA Certificate.
 
 ## 4. Install required packages.
-  1. qemu-guest-agent.
 
 ## 5. Remove unnecessary packages.
+
+## 6. Enable and setup UFW.
+
+## 7. Recreate the machine-id.
+
+## 8. Remove logs files created during the installation.
 
 # Created by: 
 

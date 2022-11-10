@@ -1,0 +1,12 @@
+---
+- name: "Adding UFW rules"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ufw.yml"
+  vars:
+    rules:
+      - {rule: "allow", name: "OpenSSH", src: "192.168.0.100", comment: "MacBook Pro"}
+      - {rule: "allow", name: "OpenSSH", src: "192.168.0.201", comment: "JumpServer"}
+
+- name: "Setting DENY as the default policy and enabling the UFW"
+  community.general.ufw:
+    policy: "deny"
+    state: "enabled"

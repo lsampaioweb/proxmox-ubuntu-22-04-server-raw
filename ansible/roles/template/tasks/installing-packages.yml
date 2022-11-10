@@ -17,3 +17,4 @@
       - {name: "pip"} # A tool for installing and managing Python packages.
       - {name: "libsecret-tools"} # Store and retrieve passwords.
       - {name: "uuid"} # Universally Unique Identifier Command-Line Tool.
+      - {name: "ufw"} # A program for managing the firewall for the VM.
