@@ -2,7 +2,7 @@
 
 Run the command in the terminal:
 ```bash
-  ansible-playbook template.yml
+  ansible-playbook template.yml -K
 ```
 
 # Tasks:
@@ -15,15 +15,17 @@ Run the command in the terminal:
 
 ## 4. Install the Homelab's CA Certificate.
 
-## 4. Install required packages.
+## 5. Create the OpenSSH keypair.
 
-## 5. Remove unnecessary packages.
+## 6. Install required packages.
 
-## 6. Enable and setup UFW.
+## 7. Remove unnecessary packages.
 
-## 7. Recreate the machine-id.
+## 8. Enable and setup UFW.
 
-## 8. Remove logs files created during the installation.
+## 9. Recreate the machine-id.
+
+## 10. Remove logs files created during the installation.
 
 # Created by: 
 
