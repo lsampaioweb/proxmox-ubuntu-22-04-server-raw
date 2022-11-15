@@ -13,8 +13,6 @@
 
 - name: "Creating the OpenSSH keypair"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/openssh-keypair.yml"
-  vars:
-    host: "{{ groups['JumpServer'][0] }}"
 
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
