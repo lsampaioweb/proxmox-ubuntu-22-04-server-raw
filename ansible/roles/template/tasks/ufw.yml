@@ -4,7 +4,6 @@
   vars:
     rules:
       - {rule: "allow", name: "OpenSSH", comment: "Allow OpenSSH for All"}
-      # - {rule: "allow", to_port: "5900:5999", proto: "tcp", comment: "VNC web console for All"}
 
 - name: "Setting DENY as the default policy and enabling the UFW"
   community.general.ufw:
