@@ -23,6 +23,9 @@
 - name: "Enabling and setting up UFW"
   ansible.builtin.import_tasks: "ufw.yml"
 
+- name: "Enabling hardware hotplug"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/hardware-hotplug.yml"
+
 - name: "Recreating the machine-id file so the new VM can get a new IP"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/machine-id.yml"
 
