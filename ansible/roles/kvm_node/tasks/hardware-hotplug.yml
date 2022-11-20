@@ -1,0 +1,5 @@
+---
+- name: "Setting Hardware HotPlug"
+  ansible.builtin.command: "qm set {{ vm_id }} --hotplug {{ hotplug }}"
+  register: "output_hotplug"
+  changed_when: output_hotplug.rc == 0 and output_hotplug.stderr == ""

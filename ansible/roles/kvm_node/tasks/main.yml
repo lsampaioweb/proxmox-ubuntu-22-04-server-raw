@@ -1,9 +1,9 @@
 ---
-- name: "Set SSD simulation, IO Threading and Discard"
+- name: "Setting SSD simulation, IO Threading and Discard"
   ansible.builtin.import_tasks: "disk-config.yml"
 
-- name: "Set CPU HotPlug"
-  ansible.builtin.import_tasks: "disk-config.yml"
+- name: "Setting Hardware HotPlug"
+  ansible.builtin.import_tasks: "hardware-hotplug.yml"
 
-- name: "Remove the CDROM"
+- name: "Removing the CDROM"
   ansible.builtin.import_tasks: "remove-cdrom.yml"
