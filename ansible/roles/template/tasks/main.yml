@@ -1,4 +1,7 @@
 ---
+- name: "Disabling Apt news"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/apt_news.yml"
+
 - name: "Disabling IPV6 on the server"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/network/ipv6-disable.yml"
 
