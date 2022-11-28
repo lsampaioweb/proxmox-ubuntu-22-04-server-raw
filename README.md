@@ -1,10 +1,8 @@
 # proxmox-ubuntu-22-04-server-raw
-Project with Packer, Terraform and Ansible scripts to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
+Project with Packer and Ansible scripts to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
 
 # Scripts:
 [Packer](packer/ "Packer")
-
-[Terraform](terraform/ "Terraform")
 
 [Ansible](ansible/ "Ansible")
 
