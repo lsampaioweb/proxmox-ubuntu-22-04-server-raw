@@ -5,7 +5,6 @@ Run the command in the terminal:
 ```bash
   ansible-playbook template.yml
   ansible-playbook kvm_node.yml
-  ansible-playbook provision.yml
 ```
 
 # Created by: 
