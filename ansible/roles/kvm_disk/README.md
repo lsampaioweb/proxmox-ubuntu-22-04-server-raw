@@ -2,14 +2,16 @@
 
 Run the command in the terminal:
 ```bash
-  ansible-playbook kvm_node.yml
+  ansible-playbook kvm_disk.yml
 ```
 
 # Tasks:
 
-### 1. Add the hotplug options.
+### 1. Set SSD simulation.
 
-### 2. Remove the CDROM.
+### 2. Set IO Thread.
+
+### 3. Set Discard (trim) of the disk.
 
 # Created by: 
 
