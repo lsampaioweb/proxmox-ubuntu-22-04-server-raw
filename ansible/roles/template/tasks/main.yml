@@ -17,9 +17,6 @@
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
 
-- name: "Disabling Apt news"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/apt_news.yml"
-
 - name: "Removing unnecessary packages"
   ansible.builtin.import_tasks: "removing-packages.yml"
 
