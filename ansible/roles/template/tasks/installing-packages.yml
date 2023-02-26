@@ -6,6 +6,7 @@
     upgrade: "safe"
     packages:
       - {name: "sudo"} # To enable elevated command.
+      - {name: "cloud-init"} # To enable cloud-init.
       - {name: "openssh-server"} # To enable SSH.
       - {name: "sshpass"} # noninteractive ssh password provider.
       - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.

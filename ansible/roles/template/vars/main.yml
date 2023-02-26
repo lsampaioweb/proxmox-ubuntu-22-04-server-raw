@@ -1,4 +1,7 @@
 ---
+# The domain name of the HomeLab.
+domain: "homelab"
+
 # All servers are located in Aracaju - Brazil. Maceio is the closest city.
 timezone: "America/Maceio"
 

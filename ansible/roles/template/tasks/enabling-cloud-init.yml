@@ -1,0 +1,6 @@
+---
+- name: "Copying cloud-init datasource to the target host"
+  ansible.builtin.copy:
+    src: "99-pve.cfg"
+    dest: "/etc/cloud/cloud.cfg.d/"
+    mode: "644"
