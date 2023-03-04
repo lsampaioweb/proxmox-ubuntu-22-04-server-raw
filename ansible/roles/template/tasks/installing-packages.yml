@@ -7,9 +7,9 @@
     packages:
       - {name: "sudo"} # To enable elevated command.
       - {name: "cloud-init"} # To enable cloud-init.
+      - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
       - {name: "openssh-server"} # To enable SSH.
       - {name: "sshpass"} # noninteractive ssh password provider.
-      - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
       - {name: "python3-pip"}
       - {name: "python-is-python3"}
       - {name: "pip"} # A tool for installing and managing Python packages.
