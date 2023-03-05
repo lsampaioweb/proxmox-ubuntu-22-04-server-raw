@@ -4,3 +4,6 @@
 
 - name: "Setting Hardware HotPlug"
   ansible.builtin.import_tasks: "hardware-hotplug.yml"
+
+- name: "Setting Cloud-Init"
+  ansible.builtin.import_tasks: "cloud-init.yml"
