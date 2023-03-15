@@ -1,9 +1,0 @@
----
-# The name of the root user used in Proxmox.
-ansible_user: "root"
-
-# The id of the password saved in the secret manager.
-root_password_id: "proxmox_root_password"
-
-# The password of the root user used in Proxmox.
-ansible_password: "{{ lookup('pipe', 'secret-tool lookup password ' + root_password_id) }}"

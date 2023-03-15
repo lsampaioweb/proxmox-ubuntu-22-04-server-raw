@@ -1,3 +1,0 @@
----
-- name: "Setting SSD simulation, IO Threading and Discard"
-  ansible.builtin.import_tasks: "disk-config.yml"

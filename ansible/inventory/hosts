@@ -1,13 +1,6 @@
 [ControlMachine]
 localhost ansible_connection=local
 
-[target]
-template ansible_host=<ip>
-
-[target:vars]
-ansible_user=usr_ansible
-ansible_password=<password>
-
 [proxmox]
 kvm-01 ansible_host=192.168.0.11
 kvm-02 ansible_host=192.168.0.12

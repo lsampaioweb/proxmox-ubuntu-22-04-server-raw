@@ -1,5 +1,0 @@
----
-- name: "Setting SSD simulation, IO Threading and Discard"
-  ansible.builtin.command: "qm set {{ vm_id }} --{{ disk_type }} file={{ file }},backup=0,discard=on,iothread=1,replicate=0,ssd=1"
-  register: "output_disk"
-  changed_when: output_disk.rc == 0 and output_disk.stderr == ""
