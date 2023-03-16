@@ -10,3 +10,9 @@ ntp_servers: "0.br.pool.ntp.org 1.br.pool.ntp.org 2.br.pool.ntp.org 3.br.pool.nt
 
 # Path of the CA Certificate.
 ssl_certificate_path: "/opt/certificates/certificate.authority/certificate.authority.crt"
+
+# The name of the root user used in VM.
+user_password_id: "usr_ansible"
+
+# The hash type to be used when encrypting the user's password.
+password_hash: "sha512"

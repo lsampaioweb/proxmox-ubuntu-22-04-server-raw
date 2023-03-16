@@ -1,0 +1,19 @@
+---
+- name: "Creating the {{ user_password_id }} local account"
+  ansible.builtin.user:
+    name: "{{ user_password_id }}"
+    comment: "{{ user_password_id }}"
+    password: "{{ lookup('pipe', 'secret-tool lookup password ' + password_id) | password_hash(password_hash) }}"
+    shell: "/bin/bash"
+    groups:
+      - "sudo"
+    state: "present"
+
+- name: "Allowing the user to run any commands with sudo without the need to type its password"
+  community.general.sudoers:
+    name: "{{ user_password_id }}"
+    user: "{{ user_password_id }}"
+    runas: "ALL"
+    commands: "ALL"
+    nopassword: true
+    state: "present"
