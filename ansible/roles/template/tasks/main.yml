@@ -11,6 +11,12 @@
 - name: "Creating the Ansible user account"
   ansible.builtin.import_tasks: "users.yml"
 
+- name: "Installing required packages"
+  ansible.builtin.import_tasks: "installing-packages.yml"
+
+- name: "Enabling Cloud-Init"
+  ansible.builtin.import_tasks: "enabling-cloud-init.yml"
+
 - name: "Ensure the VM trusts the HomeLab's CA Certificate."
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
 
@@ -19,12 +25,6 @@
 
 - name: "Creating the OpenSSH keypair"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/openssh-keypair.yml"
-
-- name: "Installing required packages"
-  ansible.builtin.import_tasks: "installing-packages.yml"
-
-- name: "Enabling Cloud-Init"
-  ansible.builtin.import_tasks: "enabling-cloud-init.yml"
 
 - name: "Removing unnecessary packages"
   ansible.builtin.import_tasks: "removing-packages.yml"
