@@ -1,10 +1,5 @@
 # Setup the machine with the default applications and settings
 
-Run the command in the terminal:
-```bash
-  ansible-playbook template.yml -K
-```
-
 # Tasks:
 
 ## 1. Disable IPV6.
