@@ -8,6 +8,9 @@
 - name: "Setting up Brazilian NTP Servers"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ntp-servers.yml"
 
+- name: "Creating the Ansible user account"
+  ansible.builtin.import_tasks: "users.yml"
+
 - name: "Ensure the VM trusts the HomeLab's CA Certificate."
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
 
@@ -31,9 +34,6 @@
 
 - name: "Enabling hardware hotplug"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/hardware-hotplug.yml"
-
-- name: "Creating the Ansible user account"
-  ansible.builtin.import_tasks: "users.yml"
 
 - name: "Recreating the machine-id file so the new VM can get a new IP"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/machine-id.yml"
