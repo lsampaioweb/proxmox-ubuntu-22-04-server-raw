@@ -3,4 +3,4 @@
   hosts: "{{ node | default('proxmox') }}"
 
   roles:
-    - "kvm_node"
+    - "kvm_setup"

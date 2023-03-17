@@ -1,5 +1,0 @@
----
-- name: "Removing the CDROM"
-  ansible.builtin.command: "qm set {{ vm_id }} --delete cdrom"
-  register: "output_cdrom"
-  changed_when: output_cdrom.rc == 0 and output_cdrom.stderr == ""

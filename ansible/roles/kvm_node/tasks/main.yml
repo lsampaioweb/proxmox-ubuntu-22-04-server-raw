@@ -1,9 +1,0 @@
----
-- name: "Removing the CDROM"
-  ansible.builtin.import_tasks: "remove-cdrom.yml"
-
-- name: "Setting Hardware HotPlug"
-  ansible.builtin.import_tasks: "hardware-hotplug.yml"
-
-- name: "Setting Cloud-Init"
-  ansible.builtin.import_tasks: "cloud-init.yml"
