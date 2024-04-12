@@ -6,10 +6,14 @@ domain: "homelab"
 timezone: "America/Maceio"
 
 # Brazilian NTP Servers.
-ntp_servers: "0.br.pool.ntp.org 1.br.pool.ntp.org 2.br.pool.ntp.org 3.br.pool.ntp.org"
+ntp_service: "timesyncd"
+ntp_servers:
+  - "ntp-pool.homelab"
 
-# Path of the CA Certificate.
-ssl_certificate_path: "/opt/certificates/certificate.authority/certificate.authority.crt"
+# Path of the SSL and SSH CA Certificate.
+certificate_authority_path: "/opt/certificates/certificate.authority"
+ssl_ca_certificate_path: "{{ certificate_authority_path }}/certificate.authority.crt"
+ssh_ca_certificate_path: "{{ certificate_authority_path }}/ca_host_key.pub"
 
 # The name of the root user used in VM.
 user_password_id: "usr_ansible"

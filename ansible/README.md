@@ -4,9 +4,9 @@ Project with Ansible scripts to create an Ubuntu template on Proxmox from an ISO
 Run the command in the terminal:
 ```bash
   ansible-playbook template.yml -e "hostname=ubuntu-22-04-server-raw"
-  ansible-playbook kvm_setup.yml -e "node=kvm-07 vm_id=901 hotplug=disk,network,cpu storage_pool=Ceph_Silver"
+  ansible-playbook kvm_setup.yml -e "node=pve-07 vm_id=901 hotplug=disk,network,cpu storage_pool=Ceph_Gold"
 ```
 
-# Created by: 
+# Created by:
 
 1. Luciano Sampaio.

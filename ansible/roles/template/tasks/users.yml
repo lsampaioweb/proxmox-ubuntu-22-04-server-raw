@@ -1,5 +1,5 @@
 ---
-- name: "Creating the {{ user_password_id }} local account"
+- name: "Creating the local account: {{ user_password_id }}"
   ansible.builtin.user:
     name: "{{ user_password_id }}"
     comment: "{{ user_password_id }}"
