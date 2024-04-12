@@ -15,4 +15,4 @@ ansible_python_interpreter=/usr/bin/python3.11
 
 [host]
 # For testing
-temp-jump-server ansible_host=<ip> password_id=<id> hostname=<name>
+test-server ansible_host=<ip> password_id=<id> hostname=<hostname>

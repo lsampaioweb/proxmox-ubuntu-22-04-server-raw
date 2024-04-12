@@ -20,9 +20,6 @@
 - name: "Ensure the VM trusts the HomeLab's CA Certificate."
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
 
-- name: "Creating the OpenSSH keypair"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/openssh-keypair.yml"
-
 - name: "Removing unnecessary packages"
   ansible.builtin.import_tasks: "removing-packages.yml"
 
