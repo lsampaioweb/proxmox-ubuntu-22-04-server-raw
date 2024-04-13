@@ -1,4 +1,11 @@
 ---
+- name: "Removing unnecessary packages"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/packages/apt.yml"
+  vars:
+    update_cache: false
+    packages:
+      - {name: "unattended-upgrades", state: "absent"}
+
 - name: "Removing dependencies that are no longer required"
   ansible.builtin.apt:
     autoremove: true
