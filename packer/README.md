@@ -26,6 +26,8 @@ Run these commands on the computer that is running Packer:
   secret-tool lookup password "proxmox-root-password"
 ```
 
+Run these commands to execute Packer:
+
 ```bash
   cd packer
 #   ./pkr.sh $1 $2 $3 $4

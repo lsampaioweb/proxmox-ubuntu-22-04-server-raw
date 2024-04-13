@@ -1,6 +1,6 @@
 ---
-- name: "Disabling IPV6 on the server"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/network/ipv6-disable.yml"
+- name: "Ensure the VM trusts the HomeLab's CA Certificate."
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
 
 - name: "Setting up Brazilian timezone"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/timezone.yml"
@@ -8,26 +8,23 @@
 - name: "Setting up Brazilian NTP Servers"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/ntp-servers.yml"
 
-- name: "Creating the Ansible user account"
-  ansible.builtin.import_tasks: "users.yml"
+- name: "Disabling IPV6 on the server"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/network/ipv6-disable.yml"
 
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
 
+- name: "Creating the Ansible user account"
+  ansible.builtin.import_tasks: "users.yml"
+
 - name: "Enabling Cloud-Init"
   ansible.builtin.import_tasks: "enabling-cloud-init.yml"
 
-- name: "Ensure the VM trusts the HomeLab's CA Certificate."
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/trust-ca-certificate.yml"
+- name: "Enabling hardware hotplug"
+  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/hardware-hotplug.yml"
 
 - name: "Removing unnecessary packages"
   ansible.builtin.import_tasks: "removing-packages.yml"
-
-- name: "Enabling and setting up UFW"
-  ansible.builtin.import_tasks: "ufw.yml"
-
-- name: "Enabling hardware hotplug"
-  ansible.builtin.import_tasks: "roles/common/tasks/debian/os/hardware-hotplug.yml"
 
 - name: "Recreating the machine-id file so the new VM can get a new IP"
   ansible.builtin.import_tasks: "roles/common/tasks/debian/os/machine-id.yml"

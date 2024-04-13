@@ -6,13 +6,9 @@
     upgrade: "safe"
     packages:
       - {name: "sudo"} # To enable elevated command.
-      - {name: "cloud-init"} # To enable cloud-init.
       - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
       - {name: "openssh-server"} # To enable SSH.
-      - {name: "ufw"} # A program for managing the firewall for the VM.
+      - {name: "cloud-init"} # To enable cloud-init.
       - {name: "python3-pip"}
       - {name: "python-is-python3"}
       - {name: "pip"} # A tool for installing and managing Python packages.
-      - {name: "sshpass"} # noninteractive ssh password provider.
-      - {name: "libsecret-tools"} # Store and retrieve passwords.
-      - {name: "uuid"} # Universally Unique Identifier Command-Line Tool.
