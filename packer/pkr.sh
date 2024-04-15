@@ -18,7 +18,7 @@ packer fmt -recursive .
 
 action=${1:-validate}
 environment=${2:-home}
-onErrorAction=${3:-abort}
+onErrorAction=${3:-cleanup}
 
 if [ "$action" = "build" ]; then
   errorAction="-on-error=$onErrorAction"
