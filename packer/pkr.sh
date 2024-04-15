@@ -31,8 +31,8 @@ if [ "$4" = "debug" ]; then
   debug=1
 fi
 
-PACKER_LOG=$debug packer $action $errorAction -only="credencials.file.password" -var-file=$environment/vars.pkrvars.hcl iso/.
+PACKER_LOG=$debug packer $action $errorAction -only="credencials.file.password" -var-file=env/$environment/vars.pkrvars.hcl iso/.
 
-PACKER_LOG=$debug packer $action $errorAction -only="ubuntu.proxmox-iso.template" -var-file=$environment/vars.pkrvars.hcl iso/.
+PACKER_LOG=$debug packer $action $errorAction -only="ubuntu.proxmox-iso.template" -var-file=env/$environment/vars.pkrvars.hcl iso/.
 
-PACKER_LOG=$debug packer $action $errorAction -only="kvm-node.null.extra-config" -var-file=$environment/vars.pkrvars.hcl iso/.
+PACKER_LOG=$debug packer $action $errorAction -only="kvm-node.null.extra-config" -var-file=env/$environment/vars.pkrvars.hcl iso/.
