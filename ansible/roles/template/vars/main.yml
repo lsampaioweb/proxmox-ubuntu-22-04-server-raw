@@ -8,7 +8,7 @@ timezone: "America/Maceio"
 # Brazilian NTP Servers.
 ntp_service: "timesyncd"
 ntp_servers:
-  - "ntp-pool.homelab"
+  - "ntp-pool.lan.homelab"
 
 # Path of the SSL and SSH CA Certificate.
 certificate_authority_path: "/opt/certificates/certificate.authority"
