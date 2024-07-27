@@ -26,6 +26,9 @@ Run these commands on the computer that is running Packer:
   secret-tool lookup password "proxmox-root-password"
 ```
 
+You have to create a Packer user, password and token. Read the documentation on the repository:
+  1. [packer-proxmox-ubuntu-22-04-iso](https://github.com/lsampaioweb/packer-proxmox-ubuntu-22-04-iso "packer-proxmox-ubuntu-22-04-iso").
+
 Run these commands to execute Packer:
 
 ```bash
