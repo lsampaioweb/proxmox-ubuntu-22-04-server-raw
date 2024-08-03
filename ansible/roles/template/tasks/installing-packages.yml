@@ -9,6 +9,5 @@
       - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
       - {name: "openssh-server"} # To enable SSH.
       - {name: "cloud-init"} # To enable cloud-init.
-      - {name: "python3-pip"}
       - {name: "python-is-python3"}
-      - {name: "pip"} # A tool for installing and managing Python packages.
+      - {name: "pipx"} # A tool for installing and managing Python packages.
