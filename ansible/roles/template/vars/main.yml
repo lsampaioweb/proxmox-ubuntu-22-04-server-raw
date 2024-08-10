@@ -11,6 +11,6 @@ ntp_servers:
   - "ntp-pool.lan.homelab"
 
 # Path of the SSL and SSH CA Certificate.
-certificate_authority_path: "/opt/certificates/certificate-authority.{{ domain }}"
-ssl_ca_certificate_path: "{{ certificate_authority_path }}/certificate-authority.{{ domain }}.crt"
+certificate_authority_path: "/opt/certificates/ca.{{ domain }}"
+ssl_ca_certificate_path: "{{ certificate_authority_path }}/ca.{{ domain }}.crt"
 ssh_ca_certificate_path: "{{ certificate_authority_path }}/ca_host_key.pub"
