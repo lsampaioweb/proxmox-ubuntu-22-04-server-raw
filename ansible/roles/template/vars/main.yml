@@ -14,3 +14,9 @@ ntp_servers:
 certificate_authority_path: "/opt/certificates/ca.{{ domain }}"
 ssl_ca_certificate_path: "{{ certificate_authority_path }}/ca.{{ domain }}.crt"
 ssh_ca_certificate_path: "{{ certificate_authority_path }}/ca_host_key.pub"
+
+# The name of the root user used in VM.
+user_password_id: "local_admin"
+
+# The hash type to be used when encrypting the user's password.
+password_hash: "sha512"

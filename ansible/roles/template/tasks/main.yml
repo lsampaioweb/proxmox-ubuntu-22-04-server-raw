@@ -14,6 +14,9 @@
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
 
+- name: "Creating the local user account"
+  ansible.builtin.import_tasks: "users.yml"
+
 - name: "Enabling Cloud-Init"
   ansible.builtin.import_tasks: "enabling-cloud-init.yml"
 
