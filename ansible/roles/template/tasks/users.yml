@@ -8,6 +8,7 @@
     groups:
       - "sudo"
     state: "present"
+    password_lock: false
 
 - name: "Allowing the user to run any commands with sudo without the need to type its password"
   community.general.sudoers:
