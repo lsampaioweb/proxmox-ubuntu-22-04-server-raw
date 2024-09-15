@@ -14,6 +14,9 @@
 - name: "Installing required packages"
   ansible.builtin.import_tasks: "installing-packages.yml"
 
+- name: "Copying default ssh config file to the target host"
+  ansible.builtin.import_tasks: "ssh-config.yml"
+
 - name: "Creating the local user account"
   ansible.builtin.import_tasks: "users.yml"
 

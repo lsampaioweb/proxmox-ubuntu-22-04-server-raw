@@ -1,0 +1,7 @@
+---
+- name: "Copying default ssh config file to the target host"
+  ansible.builtin.copy:
+    src: "ssh.conf"
+    dest: "/etc/ssh/sshd_config.d/"
+    mode: "preserve"
+  notify: "Restarting the SSH server"
