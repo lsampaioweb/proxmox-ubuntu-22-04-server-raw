@@ -7,6 +7,7 @@
     packages:
       - {name: "sudo"} # To enable elevated command.
       - {name: "qemu-guest-agent"} # To enhance Proxmox integration with the VM.
+      - {name: "ubuntu-drivers-common"} # To enable the installation of the latest drivers.
       - {name: "openssh-server"} # To enable SSH.
       - {name: "cloud-init"} # To enable cloud-init.
       - {name: "python-is-python3"}
