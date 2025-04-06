@@ -37,4 +37,4 @@ PACKER_LOG=$debug packer $action $errorAction -only="credentials.file.password" 
 
 PACKER_LOG=$debug packer $action $errorAction -only="ubuntu.proxmox-iso.template" -var-file=env/$environment/vars.pkrvars.hcl iso/.
 
-PACKER_LOG=$debug packer $action $errorAction -only="kvm-node.null.extra-config" -var-file=env/$environment/vars.pkrvars.hcl iso/.
+PACKER_LOG=$debug packer $action $errorAction -only="post-config.null.extra-config" -var-file=env/$environment/vars.pkrvars.hcl iso/.
