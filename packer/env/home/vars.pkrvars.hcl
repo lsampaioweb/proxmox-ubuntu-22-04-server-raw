@@ -2,7 +2,7 @@
 proxmox_url = "https://edge-pve-01.lan.homelab:8006/api2/json"
 
 # General
-node                 = "edge-pve-01"
+node                 = "edge-pve-02"
 vm_id                = 901
 vm_name              = "ubuntu-24-04-server-raw"
 pool                 = "Template"
