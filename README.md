@@ -1,4 +1,4 @@
-# proxmox-ubuntu-22-04-server-raw
+# proxmox-ubuntu-server-raw
 Project with Packer and Ansible scripts to create an Ubuntu template on Proxmox from an ISO file with the bare minimum packages and updates.
 
 #
